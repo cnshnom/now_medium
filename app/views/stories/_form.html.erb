@@ -1,0 +1,21 @@
+<%= form_for(story) do |form| %>
+ 
+
+  <div class="field">
+    <%= form.label :title, 'Title' %>
+    <%= form.text_field :title, class: 'input is-primary is-medium' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content, 'content' %>
+    <%= form.text_area :content, rows: 10, class: 'textarea is-primary is-medium' %>
+  </div>
+
+  <div class="field">
+    
+      <%= form.submit 'save as draft', name: 'save_as_draft', class: 'button is-medium'%>
+   
+    <%= form.submit 'publish', name: 'publish', class: 'button is-medium is-primary' %>
+   
+  </div>
+<% end %>
