@@ -1,3 +1,10 @@
+<% if story.errors.any? %>
+  <div class="notification is-danger">
+    <%= story.errors.full_messages.to_sentence %>
+  </div>
+<% end %>
+
+
 <%= form_for(story) do |form| %>
  
 
@@ -15,7 +22,8 @@
     
       <%= form.submit 'save as draft', name: 'save_as_draft', class: 'button is-medium'%>
    
-    <%= form.submit 'publish', name: 'publish', class: 'button is-medium is-primary' %>
+    <%= form.submit 'publish', name: 'publish', class: 'button is-medium is-primary' if story.may_publish? %>
+    <%= form.submit 'remove', name: 'unpublish', class: 'button is-medium is-danger' if story.may_unpublish? %>
    
   </div>
 <% end %>
