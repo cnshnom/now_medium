@@ -5,7 +5,7 @@
     <%= f.label :email %><br />
         <div class="control"> 
 
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input is-medium' %>
   </div>
     </div>
 
@@ -14,7 +14,7 @@
     <%= f.label :password %><br />
         <div class="control"> 
 
-    <%= f.password_field :password, autocomplete: "current-password", class: 'input' %>
+    <%= f.password_field :password, autocomplete: "current-password", class: 'input is-medium' %>
   </div>
     </div>
 
@@ -27,8 +27,9 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", class: 'button is-primary' %>
+    <%= f.submit "Log in", class: 'button is-primary is-medium' %>
   </div>
 <% end %>
+<hr>
 
 <%= render "devise/shared/links" %>

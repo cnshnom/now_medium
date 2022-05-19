@@ -46,6 +46,9 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'aasm', '~> 5.2'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'babosa', '~> 2.0'
+gem 'mini_magick', '~> 4.11'
+gem 'image_processing', '~> 1.12', '>= 1.12.2'
+gem 'sass-rails', '~> 6.0'
 # Use Sass to process CSS
 # gem "sassc-rails"
 

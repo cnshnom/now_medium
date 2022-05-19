@@ -12,7 +12,14 @@
     <p class="help">example:@tina2192</p>
   </div>
 
-  
+  <div class="field">
+    <%= f.label :avatar, 'photo' %><br />
+    <div class="control">
+      <%= f.file_field :avatar %>
+    </div>
+     <%= avatar(current_user) %>
+  </div>
+
   <div class="field">
     <%= f.label :intro, 'intro' %><br />
     <div class="control">
