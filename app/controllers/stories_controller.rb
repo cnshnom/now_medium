@@ -30,9 +30,11 @@ class StoriesController < ApplicationController
           when params[:unpublish]
             @story.unpublish!
             redirect_to stories_path, notice: 'removed!'
-          else
+          else 
+            
             redirect_to edit_story_path(@story), notice: 'saved!'
           end
+        
         else
           render :edit
         end
@@ -66,7 +68,7 @@ class StoriesController < ApplicationController
 
 
     def  story_params
-        params.require(:story).permit(:title,:content)
+        params.require(:story).permit(:title, :content, :cover_image)
     end
     
     

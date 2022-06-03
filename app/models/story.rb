@@ -5,6 +5,33 @@ class Story < ApplicationRecord
 
   include AASM
 
+  
+
+  # relationships
+  belongs_to :user
+  has_one_attached :cover_image
+
+
+   # validations
+  validates :title, presence: true
+
+  
+
+  # scopes
+  default_scope { where(deleted_at: nil)}
+  
+
+
+   # instance methods
+  def destroy
+    update(deleted_at: Time.now)
+  end
+
+
+  def normalize_friendly_id(input)
+    input.to_s.to_slug.normalize(transliterations: :russian).to_s
+  end
+
   aasm(column: 'status', no_direct_assignment: true) do
     state :draft, initial: true
     state :published
@@ -18,22 +45,6 @@ class Story < ApplicationRecord
     end
 
   end
-
-  belongs_to :user
-
-  validates :title, presence: true
-
-  default_scope { where(deleted_at: nil)}
-
-  def destroy
-    update(deleted_at: Time.now)
-  end
-
-
-  def normalize_friendly_id(input)
-    input.to_s.to_slug.normalize(transliterations: :russian).to_s
-  end
-
 
   private
 

@@ -90,7 +90,11 @@
             </p>
               </footer>
             </div>
-           
+           <% if story.cover_image.attached? %>
+            <figure class="media-right">
+              <%= image_tag story.cover_image.variant(resize: '150x150') %>
+            </figure>
+            <% end %>
 
           </article>
           <% end %>
