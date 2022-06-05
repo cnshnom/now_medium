@@ -1,14 +1,15 @@
-# Now blog 
+# Now 
 ## Description
 
-Now is a Blog application, using **Rails 7 and bulma framework**. 
-Users can **Create, Read, Update, Delete** stories, and **sign up, log in** as member.
+Now is a blog application, using **Rails 7 and bulma framework**. 
+Users can **Create, Read, Update, Delete** stories, add cover image, and **sign up, log in, upload avatar** as member.
+The published articles will show in the main page.
 
 
    
 ## How to Install and Run the Project
 
-After clone the popcorn repository, in terminal can run: 
+After clone the now_medium repository, in terminal can run: 
 ```
 rails start
 ```
