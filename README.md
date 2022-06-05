@@ -1,24 +1,18 @@
-# README
+# Now blog 
+## Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Now is a Blog application, using **Rails 7 and bulma framework**. 
+Users can **Create, Read, Update, Delete** stories, and **sign up, log in** as member.
 
-Things you may want to cover:
 
-* Ruby version
+   
+## How to Install and Run the Project
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After clone the popcorn repository, in terminal can run: 
+```
+rails start
+```
+to run the app on 
+```
+localhost:3000
+```
