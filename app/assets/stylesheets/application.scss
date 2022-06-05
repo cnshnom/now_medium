@@ -15,9 +15,21 @@
  *= require bulma/bulma.css
  *= require stories
  */
+ 
+
+ @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Fredoka+One&family=Shadows+Into+Light&display=swap');
+
 .navbar-link{
+    font-family: 'Cormorant Garamond', serif;
     .user-avatar{
         border-radius: 50%;
         margin-right: 10px;
     }
 }
+.navbar-brand{
+    .nownow{
+        font-size: 40px;
+        font-family: 'Cormorant Garamond', serif;
+    }
+}
+

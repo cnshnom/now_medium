@@ -7,7 +7,7 @@
 
 <%= form_for(story) do |form| %>
   <div class="field">
-  <%= image_tag story.cover_image.variant(resize: '1000x800'), class: 'cover-image' if story.cover_image.attached? %>
+  <%= image_tag story.cover_image.variant(resize_to_limit: [1000,800]), class: 'cover-image' if story.cover_image.attached? %>
     <%= form.label :cover_image, 'Cover Image' %>
     <%= form.file_field :cover_image %>
   </div>
@@ -24,10 +24,10 @@
 
   <div class="field">
     
-      <%= form.submit 'save as draft', name: 'save_as_draft', class: 'button is-medium'%>
+      <%= form.submit 'save', name: 'save_as_draft', class: 'button is-medium'%>
    
     <%= form.submit 'publish', name: 'publish', class: 'button is-medium is-primary' if story.may_publish? %>
-    <%= form.submit 'remove', name: 'unpublish', class: 'button is-medium is-danger' if story.may_unpublish? %>
+    <%= form.submit 'draft', name: 'unpublish', class: 'button is-medium is-danger' if story.may_unpublish? %>
    
   </div>
 <% end %>

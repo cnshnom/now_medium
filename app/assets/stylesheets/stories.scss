@@ -1,5 +1,93 @@
-form{
-    img.cover-image{
-        display: block;
+form {
+    
+  
+  img.cover-image {
+    display: block;
+  }
+}
+
+form.story-editor {
+  margin-bottom: 2em;
+}
+
+.all-articles{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.story-content {
+  .title{
+        font-family: 'Cormorant Garamond', serif;
+      }
+  // author
+  .profile {
+    display: flex;
+    align-items: center;
+
+    img.avatar {
+      border-radius: 25px;
+      width: 50px;
+      height:50px;
     }
+
+    .username {
+      padding: 3px;
+      margin-left: 1em;
+      font-family: 'Cormorant Garamond', serif;
+    
+    }
+
+    
+  }
+
+  // main article
+  article.content {
+    margin-top: 1em;
+    text-align: left;
+    padding: 1em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+
+    img.cover-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  // comments
+  .comments {
+    padding: 0.7em 1em;
+    text-align: left;
+    margin-bottom: 1em;
+
+    h2 {
+      color: darkgray;
+      font-size: 1.3em;
+    }
+
+    .comment-editor {
+      button {
+        margin-top: 8px;
+      }
+    }
+
+    .comment {
+      border: solid lightgray 1px;
+      border-radius: 8px;
+      box-shadow: 1px 1px 3px lightgray;
+      padding: 1em 1.4em;
+      margin-top: 8px;
+      margin-bottom: 1em;
+    }
+
+    p {
+      color: darkgray;
+    }
+  }
+
+  // bookmark
+  .bookmark-button {
+    margin-left: 1em;
+    font-size: 1.4em;
+  }
 }

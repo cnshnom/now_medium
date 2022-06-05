@@ -49,7 +49,7 @@ gem 'babosa', '~> 2.0'
 gem 'mini_magick', '~> 4.11'
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
 gem 'sass-rails', '~> 6.0'
-
+gem 'paranoia', '~> 2.6'
 
 
 
